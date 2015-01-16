@@ -1,9 +1,9 @@
-#include "StorkApp.h"
+#include "McciApp.h"
 #include "Moose.h"
 #include "AppFactory.h"
 
 template<>
-InputParameters validParams<StorkApp>()
+InputParameters validParams<McciApp>()
 {
   InputParameters params = validParams<MooseApp>();
 
@@ -12,34 +12,34 @@ InputParameters validParams<StorkApp>()
   return params;
 }
 
-StorkApp::StorkApp(const std::string & name, InputParameters parameters) :
+McciApp::McciApp(const std::string & name, InputParameters parameters) :
     MooseApp(name, parameters)
 {
   srand(processor_id());
 
   Moose::registerObjects(_factory);
-  StorkApp::registerObjects(_factory);
+  McciApp::registerObjects(_factory);
 
   Moose::associateSyntax(_syntax, _action_factory);
-  StorkApp::associateSyntax(_syntax, _action_factory);
+  McciApp::associateSyntax(_syntax, _action_factory);
 }
 
-StorkApp::~StorkApp()
+McciApp::~McciApp()
 {
 }
 
 void
-StorkApp::registerApps()
+McciApp::registerApps()
 {
-  registerApp(StorkApp);
+  registerApp(McciApp);
 }
 
 void
-StorkApp::registerObjects(Factory & factory)
+McciApp::registerObjects(Factory & factory)
 {
 }
 
 void
-StorkApp::associateSyntax(Syntax & syntax, ActionFactory & action_factory)
+McciApp::associateSyntax(Syntax & syntax, ActionFactory & action_factory)
 {
 }
