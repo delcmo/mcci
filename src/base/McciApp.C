@@ -3,6 +3,14 @@
 #include "AppFactory.h"
 #include "ModulesApp.h"
 
+#include "CoriumEnergyODE.h"
+#include "MaterialPropertiesMCCI.h"
+#include "TemperatureCorium.h"
+#include "ErodedMassConcrete.h"
+#include "MixtureMass.h"
+#include "ConcreteMass.h"
+#include "ErodedDepth.h"
+
 template<>
 InputParameters validParams<McciApp>()
 {
@@ -40,6 +48,13 @@ McciApp::registerApps()
 void
 McciApp::registerObjects(Factory & factory)
 {
+    registerScalarKernel(CoriumEnergyODE);
+    registerAux(TemperatureCorium);
+    registerAux(ErodedMassConcrete);
+    registerAux(MixtureMass);
+    registerAux(ConcreteMass);
+    registerAux(ErodedDepth);
+    registerUserObject(MaterialPropertiesMCCI);
 }
 
 void
