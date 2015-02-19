@@ -39,6 +39,7 @@ McciApp::~McciApp()
 {
 }
 
+extern "C" void McciApp__registerApps() { McciApp::registerApps(); }
 void
 McciApp::registerApps()
 {
