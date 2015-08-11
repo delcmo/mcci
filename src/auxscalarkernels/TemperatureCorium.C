@@ -28,8 +28,8 @@ InputParameters validParams<TemperatureCorium>()
   return params;
 }
 
-TemperatureCorium::TemperatureCorium(const std::string & name, InputParameters parameters) :
-    AuxScalarKernel(name, parameters),
+TemperatureCorium::TemperatureCorium(const InputParameters & parameters) :
+    AuxScalarKernel(parameters),
     _E(coupledScalarValue("E")),
     _mixture_mass(coupledScalarValue("mixture_mass")),
     _mixture_mass_old(coupledScalarValueOld("mixture_mass")),

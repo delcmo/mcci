@@ -24,8 +24,8 @@ InputParameters validParams<MixtureMass>()
   return params;
 }
 
-MixtureMass::MixtureMass(const std::string & name, InputParameters parameters) :
-    AuxScalarKernel(name, parameters),
+MixtureMass::MixtureMass(const InputParameters & parameters) :
+    AuxScalarKernel(parameters),
     _concrete_mass(coupledScalarValue("concrete_mass"))
 {}
 

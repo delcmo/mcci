@@ -13,7 +13,7 @@ class MaterialPropertiesMCCI : public GeneralUserObject
 {
 public:
   // Constructor
-  MaterialPropertiesMCCI(const std::string & name, InputParameters parameters);
+  MaterialPropertiesMCCI(const InputParameters & parameters);
 
   // Destructor  
   virtual ~MaterialPropertiesMCCI(); 

@@ -31,7 +31,7 @@ InputParameters validParams<CoriumEnergyODE>();
 class CoriumEnergyODE : public ODEKernel
 {
 public:
-  CoriumEnergyODE(const std::string & name, InputParameters parameters);
+  CoriumEnergyODE(const InputParameters & parameters);
   virtual ~CoriumEnergyODE();
 
 protected:

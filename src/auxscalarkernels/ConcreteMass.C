@@ -24,8 +24,8 @@ InputParameters validParams<ConcreteMass>()
   return params;
 }
 
-ConcreteMass::ConcreteMass(const std::string & name, InputParameters parameters) :
-    AuxScalarKernel(name, parameters),
+ConcreteMass::ConcreteMass(const InputParameters & parameters) :
+    AuxScalarKernel(parameters),
     _concrete_mass(coupledScalarValue("concrete_mass_erobed"))
 {}
 

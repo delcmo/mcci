@@ -25,8 +25,8 @@ InputParameters validParams<ErodedDepth>()
   return params;
 }
 
-ErodedDepth::ErodedDepth(const std::string & name, InputParameters parameters) :
-    AuxScalarKernel(name, parameters),
+ErodedDepth::ErodedDepth(const InputParameters & parameters) :
+    AuxScalarKernel(parameters),
     _eroded_mass(coupledScalarValue("eroded_mass")),
     _concrete(getUserObject<MaterialPropertiesMCCI>("concrete"))
 {}

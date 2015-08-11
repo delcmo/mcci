@@ -29,8 +29,8 @@ InputParameters validParams<CoriumEnergyODE>()
   return params;
 }
 
-CoriumEnergyODE::CoriumEnergyODE(const std::string & name, InputParameters parameters) :
-    ODEKernel(name, parameters),
+CoriumEnergyODE::CoriumEnergyODE(const InputParameters & parameters) :
+    ODEKernel(parameters),
     _mass_concrete(coupledScalarValue("concrete_mass")),
     _corium_temp(coupledScalarValue("corium_temp")),
     _Tdec(getParam<Real>("Tdec")),

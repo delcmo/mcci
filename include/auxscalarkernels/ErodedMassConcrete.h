@@ -27,7 +27,7 @@ class ErodedMassConcrete : public AuxScalarKernel
 {
 public:
 
-  ErodedMassConcrete(const std::string & name, InputParameters parameters);
+  ErodedMassConcrete(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

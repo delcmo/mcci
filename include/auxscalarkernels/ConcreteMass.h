@@ -26,7 +26,7 @@ class ConcreteMass : public AuxScalarKernel
 {
 public:
 
-  ConcreteMass(const std::string & name, InputParameters parameters);
+  ConcreteMass(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

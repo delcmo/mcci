@@ -27,7 +27,7 @@ class TemperatureCorium : public AuxScalarKernel
 {
 public:
 
-  TemperatureCorium(const std::string & name, InputParameters parameters);
+  TemperatureCorium(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

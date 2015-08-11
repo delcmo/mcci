@@ -27,7 +27,7 @@ class ErodedDepth : public AuxScalarKernel
 {
 public:
 
-  ErodedDepth(const std::string & name, InputParameters parameters);
+  ErodedDepth(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

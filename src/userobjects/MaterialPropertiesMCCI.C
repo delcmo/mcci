@@ -10,8 +10,8 @@ InputParameters validParams<MaterialPropertiesMCCI>()
     return params;
 }
 
-MaterialPropertiesMCCI::MaterialPropertiesMCCI(const std::string & name, InputParameters parameters) :
-  GeneralUserObject(name, parameters),
+MaterialPropertiesMCCI::MaterialPropertiesMCCI(const InputParameters & parameters) :
+  GeneralUserObject(parameters),
     _Cp(getParam<Real>("Cp")),
     _rho(getParam<Real>("rho"))
 {}
