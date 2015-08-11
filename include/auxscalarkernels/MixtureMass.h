@@ -26,7 +26,7 @@ class MixtureMass : public AuxScalarKernel
 {
 public:
 
-  MixtureMass(const std::string & name, InputParameters parameters);
+  MixtureMass(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

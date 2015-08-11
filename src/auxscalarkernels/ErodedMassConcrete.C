@@ -28,8 +28,8 @@ InputParameters validParams<ErodedMassConcrete>()
   return params;
 }
 
-ErodedMassConcrete::ErodedMassConcrete(const std::string & name, InputParameters parameters) :
-    AuxScalarKernel(name, parameters),
+ErodedMassConcrete::ErodedMassConcrete(const InputParameters & parameters) :
+    AuxScalarKernel(parameters),
     _corium_temp(coupledScalarValue("corium_temp")),
     _Tdec(getParam<Real>("Tdec")),
     _ht_coeff_corium_to_concrete(getParam<Real>("ht_coeff_corium_to_concrete")),

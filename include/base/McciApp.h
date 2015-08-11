@@ -11,7 +11,7 @@ InputParameters validParams<McciApp>();
 class McciApp : public MooseApp
 {
 public:
-  McciApp(const std::string & name, InputParameters parameters);
+  McciApp(InputParameters parameters);
   virtual ~McciApp();
 
   static void registerApps();
